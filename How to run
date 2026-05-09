@@ -1,0 +1,80 @@
+1. Install Required Software
+Install Node.js
+Download from:
+
+Node.js Official Website
+
+After installing, check:
+
+node -v
+npm -v
+2. Install VS Code
+
+Visual Studio Code
+
+Install extensions:
+
+Thunder Client
+MongoDB for VS Code
+3. Clone Your GitHub Repository
+
+Open terminal in VS Code:
+
+git clone https://github.com/Dnyaneshsasale/WAD.git
+
+Go inside project folder:
+
+cd WAD
+4. Install Node Modules
+
+Very important.
+
+Run:
+
+npm install
+
+This installs all packages from package.json.
+
+If packages missing, install manually:
+
+npm install express mongoose dotenv body-parser
+5. Create .env File
+
+Inside project folder create:
+
+.env
+
+Add:
+
+PORT=3000
+MONGO_URI=your_mongodb_connection_string
+
+Example:
+
+PORT=3000
+MONGO_URI=mongodb://username:password@.....
+6. Start Server
+
+Run:
+
+node server.js
+
+You should see:
+
+MongoDB Connected
+Server is running on port 3000
+7. Test APIs
+
+Using Thunder Client
+
+GET
+http://localhost:3000/students
+POST
+http://localhost:3000/add-student
+
+Body:
+
+{
+  "name": "Dnyanesh",
+  "marks": 95
+}
